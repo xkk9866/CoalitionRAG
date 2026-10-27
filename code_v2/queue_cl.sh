@@ -58,7 +58,7 @@ once $RT/ircot_$M.json $PY llm_baselines.py --methods setr,ircot >> $L/mh.log 2>
 once $R/qa/qwen25-7b-awq_forest_cl_$M.json $PY qa.py --runs none,first:bm25,first:bge,zs_rerank_exp,point_bce_u100,f_cdn-cover,setr,ircot,forest_clx,zero_cl,forest_cl > $L/qa_mh.log 2>&1
 )
 
-step zero-shot cross-encoder in the same closure procedure (no multi-hop supervision)
+step "zero-shot cross-encoder in the same closure procedure (no multi-hop supervision)"
 cl zero_cl hotpotqa --eval_only zero --base 100 --grow 8
 step closure on first-stage top-100 without recruitment
 cl forest_cl100 hotpotqa --eval_only forest --base 100
