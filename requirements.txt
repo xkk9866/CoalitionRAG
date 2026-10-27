@@ -1,0 +1,10 @@
+torch
+transformers
+sentence-transformers
+datasets
+numpy
+pandas
+pyarrow
+rank-bm25
+accelerate
+matplotlib
